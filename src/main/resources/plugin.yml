@@ -1,0 +1,10 @@
+name: PluginTests
+version: '${version}'
+main: org.squidxtv.plugintests.PluginTests
+api-version: 1.18
+prefix: PluginTests
+authors: [ SquidXTV ]
+commands:
+  give_item:
+    description: gives custom plugin item to player
+    usage: /<command> item_name
