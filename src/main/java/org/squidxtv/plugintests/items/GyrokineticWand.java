@@ -21,7 +21,7 @@ public class GyrokineticWand implements CustomItem {
         ItemStack item = new ItemStack(Material.BLAZE_ROD);
         ItemMeta meta = item.getItemMeta();
         meta.displayName(Component.text("Gyrokinetic Wand"));
-        NamespacedKey key = new NamespacedKey(PluginTests.getInstance(), "custom-item");
+        NamespacedKey key = new NamespacedKey(PluginTests.getInstance(), "custom-item-id");
         meta.getPersistentDataContainer().set(key, PersistentDataType.STRING, "gyrokinetic-wand");
         item.setItemMeta(meta);
         player.getInventory().addItem(item);

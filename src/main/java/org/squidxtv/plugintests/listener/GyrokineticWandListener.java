@@ -1,8 +1,10 @@
 package org.squidxtv.plugintests.listener;
 
+import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
@@ -25,11 +27,12 @@ public class GyrokineticWandListener implements Listener {
         if(event.getItem() == null) return;
         ItemStack item = event.getItem();
         ItemMeta meta = item.getItemMeta();
-        NamespacedKey key = new NamespacedKey(PluginTests.getInstance(), "custom-item");
+        NamespacedKey key = new NamespacedKey(PluginTests.getInstance(), "custom-item-id");
         PersistentDataContainer container = meta.getPersistentDataContainer();
         if(!container.has(key)) return;
         if(!container.get(key, PersistentDataType.STRING).equals("gyrokinetic-wand")) return;
         CustomItems.GYROKINETIC_WAND.getItem().onRightClick(event);
 
     }
+
 }
